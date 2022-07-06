@@ -1,0 +1,42 @@
+{
+  "name": "@ironflag/prettier-config",
+  "version": "1.0.1",
+  "description": "IRONFLAG's extensible shared Prettier config",
+  "keywords": [
+    "prettier",
+    "prettierconfig",
+    "prettier-config",
+    "config",
+    "format",
+    "ironflag",
+    "styleguide"
+  ],
+  "homepage": "https://github.com/ironflag-io/prettier-config",
+  "bugs": "https://github.com/ironflag-io/prettier-config/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ironflag-io/prettier-config.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Han Yeong-woo",
+    "url": "https://github.com/nix6839"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write '**/*.{ts,js,json,md,yml,yaml}' && sort-package-json",
+    "format:check": "prettier --check '**/*.{ts,js,json,md,yml,yaml}' && sort-package-json --check"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.42",
+    "@types/prettier": "^2.6.3",
+    "prettier": "^2.7.1",
+    "sort-package-json": "^1.57.0",
+    "typescript": "^4.7.4"
+  },
+  "packageManager": "pnpm@7.1.9"
+}
