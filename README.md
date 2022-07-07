@@ -1,6 +1,6 @@
 # @ironflag/prettier-config
 
-![CI status](https://github.com/ironflag-io/prettier-config/actions/workflows/node-ci.yml/badge.svg)
+[![CI status](https://github.com/ironflag-io/prettier-config/actions/workflows/ci.yml/badge.svg)](https://github.com/ironflag-io/prettier-config/actions/workflows/ci.yml)
 [![npm version](https://badge.fury.io/js/@ironflag%2Fprettier-config.svg)](https://badge.fury.io/js/@ironflag%2Fprettier-config)
 
 [IRONFLAG]'s extensible shared Prettier config.
