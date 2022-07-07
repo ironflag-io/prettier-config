@@ -1,13 +1,12 @@
-name: Node.js CI
+name: CI
 
 on:
   push:
     branches: ['main']
   pull_request:
-    branches: ['main']
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,14 +15,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7.3.0
+          version: 7.1.2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
+
       - run: pnpm i --frozen-lockfile
       - run: pnpm run build
+
       - run: pnpm run format:check
